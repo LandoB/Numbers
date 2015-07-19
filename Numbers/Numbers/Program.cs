@@ -1,26 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Numbers
+namespace ArrayAdding
 {
-	class MainClass
+	public class Program
 	{
-		public static void Main (string[] args)
+		public static void Main(string[] args)
 		{
-			Console.WriteLine ("Please enter a positive integer: ");
-			int upperLimit = int.Parse (Console.ReadLine());
+			Console.WriteLine("Please enter a positive integer: ");
+			int upperLimit = int.Parse(Console.ReadLine());
 
-				List<int> evenIntegers = new List<int>();
+			List<int> evenIntegers = new List<int>();
 
-				for (var i = 1; i < upperLimit; i++)
+			for (var i = 1; i < upperLimit; i++)
+			{
+				if (i % 2 == 0)
 				{
-					if (i % 2 == 0)
-					{
-						evenIntegers.Add(i);
-						Console.WriteLine(i);
-					}
-						
+					evenIntegers.Add(i);
+					Console.WriteLine(i);
 				}
+			}
+
+
 		}
 	}
 }
